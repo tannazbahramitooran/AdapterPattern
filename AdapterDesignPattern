@@ -1,4 +1,4 @@
-## What is Adapter design pattern?
+What is Adapter design pattern?
 
 The Adapter Design Pattern is a structural design pattern that allows two incompatible classes to work together by converting the interface of one class
 into the interface expected by the other.
