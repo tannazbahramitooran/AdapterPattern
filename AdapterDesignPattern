@@ -1,0 +1,40 @@
+## What is Adapter design pattern?
+
+The Adapter Design Pattern is a structural design pattern that allows two incompatible classes to work together by converting the interface of one class
+into the interface expected by the other.
+This is commonly used when existing classes can't be modified or when an interface needs to be adapted to a new
+system. The pattern involves creating an adapter class that wraps the existing class and translates its interface into the interface that the client expects.
+
+public class EmployeeAdapter
+{
+    private readonly List<Employee> _employees;
+
+    public EmployeeAdapter(List<Employee> employees)
+    {
+        _employees = employees;
+    }
+
+    public string ToJsonString()
+    {
+          string jsonString = JsonConvert.SerializeObject(_employees );
+        return jsonString;
+    }
+}
+
+You would use the EmployeeAdapter class whenever you need to convert a list of Employee objects into a JSON string. 
+For example, if you have an API endpoint that needs to return a list of Employees as a JSON string, you could create an instance of the EmployeeAdapter class, pass it the list of Employees,
+then call the ToJsonString() method to get the JSON string.
+
+Benefits of the Adapter Design Pattern
+
+The Adapter Design Pattern offers several benefits:
+
+- Allows for the reuse of existing classes, which can reduce development time and costs.
+- The adapter pattern helps to keep your code decoupled and easy to maintain.
+- It's easy to understand and implement.
+
+Conclusion
+
+The Adapter Design Pattern is a powerful and useful tool for connecting incompatible classes and interfaces. 
+It allows existing classes to be reused, keeps code decoupled and maintainable, and is easy to understand and implement. 
+If you find yourself needing to connect two incompatible classes, the Adapter Design Pattern is a great option.
